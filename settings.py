@@ -1,3 +1,4 @@
+import os
 from settings_local import *
 # Django settings for oreills project.
 

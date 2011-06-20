@@ -14,4 +14,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
+    (r'^subterreader/$', 'subterreader.views.manage'),
+    (r'^subterreader/read/$', 'subterreader.views.read'),
+    (r'^subterreader/settings/$', 'subterreader.views.settings'),
 )
