@@ -22,6 +22,7 @@ urlpatterns = patterns('',
     (r'^subterreader/$', 'subterreader.views.manage'),
     (r'^subterreader/read/$', 'subterreader.views.read'),
     (r'^subterreader/settings/$', 'subterreader.views.settings'),
+    (r'^subterreader/iframe/(?P<url>.+)$', 'subterreader.views.iframe'),
 )
 
 urlpatterns += staticfiles_urlpatterns()

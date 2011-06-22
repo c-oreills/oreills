@@ -3,7 +3,7 @@ Current user: {{ request.user }}
 {% if documents_list %}
     {% for document in documents_list %}
         <p>
-        <iframe src="{{ document.url }}/" width="100%" id="iframe-{{ forloop.counter0 }}" onload="alert(this.location)">
+        <iframe src="../iframe/{{ document.url }}" width="100%" id="iframe-{{ forloop.counter0 }}">
         </iframe>
         </p>
     {% endfor %}
