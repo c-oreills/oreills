@@ -6,12 +6,11 @@
     <script type="text/javascript">
       // Use YQL as advised in http://www.wait-till-i.com/2010/01/10/loading-external-content-with-ajax-using-jquery-and-yql/
       function load_url_to_container(url, container) {
-        var yql_url = 'http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D%22' + encodeURIComponent(url) + '%22';
-        $.get(yql_url,
+        var yql_url = 'http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D%22' + encodeURIComponent(url) + '%22&format=xml&callback=?';
+        $.getJSON(yql_url,
             function (data) {
-              var response_content = $(data).find('body').contents();
-              container.html(response_content);
-            })//, 'xml');
+              container.html(response_content.results[0]);
+            });
       }
 
       $(document).ready(function () {
