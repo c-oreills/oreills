@@ -100,6 +100,7 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     os.path.join(BASE_PATH, 'templates'),
+    os.path.join(BASE_PATH, 'subterreader', 'templates'),
 )
 
 INSTALLED_APPS = (
