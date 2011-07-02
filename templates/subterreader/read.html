@@ -9,8 +9,14 @@
         var yql_url = 'http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D%22' + encodeURIComponent(url) + '%22&format=xml&callback=?';
         $.getJSON(yql_url,
             function (data) {
-              container.html(data.results[0]);
+              var ext_html = $(data.results[0]);
+              var clean_html = sanitize(ext_html);
+              container.html(clean_html);
             });
+      }
+
+      function sanitize(ext_html){
+        return ext_html;
       }
 
       $(document).ready(function () {
