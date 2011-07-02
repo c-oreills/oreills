@@ -19,9 +19,7 @@ urlpatterns = patterns('',
 
     (r'^accounts/login/$', 'django.contrib.auth.views.login'),
 
-    (r'^subterreader/$', 'subterreader.views.manage'),
-    (r'^subterreader/read/$', 'subterreader.views.read'),
-    (r'^subterreader/settings/$', 'subterreader.views.settings'),
+    (r'^subterreader/', include('subterreader.urls')),
 )
 
 urlpatterns += staticfiles_urlpatterns()
