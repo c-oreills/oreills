@@ -1,6 +1,7 @@
 from django.conf.urls.defaults import patterns, include, url
 from django.contrib.auth.views import login
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.views.generic.simple import direct_to_template
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -8,7 +9,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'oreills.views.home', name='home'),
+    url(r'^$', direct_to_template, dict(template='home.html')),
     # url(r'^oreills/', include('oreills.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
