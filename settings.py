@@ -2,7 +2,10 @@ import os
 from settings_local import *
 # Django settings for oreills project.
 
-DEBUG = True
+if ENV == 'prod':
+    DEBUG = False
+else:
+    DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
