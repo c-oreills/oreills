@@ -83,13 +83,13 @@ STATICFILES_FINDERS = (
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'shpaml_loader.filesystem',
+    'djaml.filesystem',
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
 )
 
-# Use cacheing of shpaml in production
+# Use cacheing of hamlpy in production
 if not DEBUG:
     TEMPLATE_LOADERS = (
         ('django.template.loaders.cached.Loader', TEMPLATE_LOADERS),
