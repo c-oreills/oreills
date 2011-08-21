@@ -158,8 +158,11 @@ INTERNAL_IPS = ('127.0.0.1',)
 
 FORCE_SCRIPT_NAME = ''
 
+COMPRESS_ENABLED = False
+
 COMPRESS_PRECOMPILERS = (
     ('text/coffeescript', 'coffee --compile --stdio'),
 )
 
-COMPRESS_ROOT = os.path.join(BASE_PATH, 'static')
+if DEBUG:
+    COMPRESS_ROOT = os.path.join(BASE_PATH, 'static')
