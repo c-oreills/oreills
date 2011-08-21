@@ -78,6 +78,7 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    'compressor.finders.CompressorFinder',
 )
 
 
@@ -126,7 +127,8 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'subterreader',
-    'debug_toolbar'
+    'debug_toolbar',
+    'compressor',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -155,3 +157,9 @@ LOGGING = {
 INTERNAL_IPS = ('127.0.0.1',)
 
 FORCE_SCRIPT_NAME = ''
+
+COMPRESS_PRECOMPILERS = (
+    ('text/coffeescript', 'coffee --compile --stdio'),
+)
+
+COMPRESS_ROOT = os.path.join(BASE_PATH, 'static')
