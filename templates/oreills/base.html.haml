@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+%html{'lang':"en"}
+  %head
+    <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}reset.css"></link>
+    <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}typography.css"></link>
+    <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}oreills.css"></link>
+    <script type="text/javascript" src="{{ STATIC_URL }}jquery-1.6.2.min.js"></script>
+    - block head
+    %title
+      - block title 
+  %body
+    #header
+      %h1 oreills
+    #content
+      - block content
