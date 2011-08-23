@@ -1,0 +1,31 @@
+.main-container {
+    margin: auto;
+    max-width: 800px;
+}
+
+.header {
+    padding: 30px 10px 0 10px;
+}
+
+.header h1 {
+    margin-bottom: 0;
+    font-size: 3em;
+}
+
+.content {
+    
+}
+
+.linkbar {
+    text-align: right;
+
+}
+
+.linkbar-inner {
+    padding: 2px 8px;
+    /*background-color: #ddffdd;*/
+}
+
+.linkbar-inner span {
+    margin: 0 6px;
+}
