@@ -1,7 +1,7 @@
 [submodule "subterreader"]
 	path = subterreader
-	url = https://github.com/christyor73/subterreader.git
+	url = git@github.com:christyor73/subterreader.git
 
 [submodule "av"]
 	path = static/av
-	url = https://github.com/christyor73/AV.git
+	url = git@github.com:christyor73/AV.git
