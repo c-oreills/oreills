@@ -9,8 +9,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', direct_to_template, dict(template='oreills/home.html.haml')),
-    url(r'^about/$', direct_to_template, dict(template='oreills/about.html.haml')),
+    url(r'^$', direct_to_template, dict(template='oreills/about.html.haml')),
+    #url(r'^about/$', direct_to_template, dict(template='oreills/about.html.haml')),
     url(r'^contact/$', direct_to_template, dict(template='oreills/contact.html.haml')),
     url(r'^projects/$', direct_to_template, dict(template='oreills/projects.html.haml')),
     url(r'^projects/av$', direct_to_template, dict(template='av/av.html.haml')),
