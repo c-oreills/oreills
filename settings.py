@@ -81,6 +81,11 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
+if DEBUG:
+    JQUERY_URL = '%sjs/jquery-1.6.2.min.js' % STATIC_URL
+else:
+    JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'
+
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
